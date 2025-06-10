@@ -47,6 +47,7 @@ export default function Home() {
         setError('Aucune donnée disponible')
       }
     } catch (err) {
+      console.error('Erreur API:', err)
       setError('Erreur lors de la récupération des données')
     } finally {
       setLoading(false)
@@ -61,7 +62,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mb-8">
-          Qualité de l'air - Lyon
+          Qualité de l&apos;air - Lyon
         </h1>
         
         <div className="bg-white rounded-lg shadow-lg p-6">
